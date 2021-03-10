@@ -1,0 +1,22 @@
+  .current-weather{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #0D1F22;
+    color: #fff;
+    height: 450px;
+    width: 865px;
+  }
+
+  .current-weather_icon{
+    width: 60px;
+  }
+
+  .current-weather_temp, .current-weather_description{
+    font-size: 24px;
+  }
+
+  .current-weather_description{
+    text-transform: capitalize;
+  }

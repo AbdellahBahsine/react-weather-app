@@ -1,6 +1,6 @@
 import './weather.component.css';
 import axios from 'axios';
-import {useState, useEffect} from 'react';
+import {useState} from 'react';
 
 import SearchBar from '../search-bar/search-bar.component';
 import CurrentWeather from '../current-weather/current-weather.component';

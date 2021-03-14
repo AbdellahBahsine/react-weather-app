@@ -12,7 +12,7 @@ const SearchBar = ({handleChange, getWeather, city, error}) => {
                 />
                 <button onClick={getWeather}>Search</button>
             </div>
-            {error && <p className="error">Please Enter a Valid City!</p>}
+            {error && <div className="alert"><p className="error">Please enter a valid city!</p> <i class="fas fa-exclamation-circle"></i></div>}
         </div>
     )
 }

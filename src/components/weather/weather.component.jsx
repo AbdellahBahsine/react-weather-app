@@ -26,7 +26,15 @@ const Weather = () => {
         setError(false)
         setLoading(true)
 
-        axios.get(`https://cors-proxy.htmldriven.com/?url=http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${api_key}`)
+        
+
+        axios.get('https://api.openweathermap.org/data/2.5/weather', {
+            params: {
+                q: city,
+                units: 'metric',
+                APPID: api_key,
+            }
+        })
         .then(response => {
             setData(response.data) 
             setCity('')
@@ -39,7 +47,6 @@ const Weather = () => {
         })
 
     }
-
     // Giving city the input value
 
     function handleChange(e) {

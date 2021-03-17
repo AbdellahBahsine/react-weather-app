@@ -26,7 +26,7 @@ const Weather = () => {
         setError(false)
         setLoading(true)
 
-        axios.get(`https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${api_key}`)
+        axios.get(`https://cors-proxy.htmldriven.com/?url=http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${api_key}`)
         .then(response => {
             setData(response.data) 
             setCity('')

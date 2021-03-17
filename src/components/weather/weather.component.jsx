@@ -26,27 +26,35 @@ const Weather = () => {
         setError(false)
         setLoading(true)
 
-        
+        const options = {
+        method: 'GET',
+        url: 'https://community-open-weather-map.p.rapidapi.com/weather',
+        params: {
+            q: city,
+            id: '2172797',
+            units: '"metric" or "imperial"',
+            mode: 'xml, html'
+        },
+        headers: {
+            'x-rapidapi-key': "29046fe946mshc672e82c43ffa9bp1c06e2jsn5a2b847befbd",
+            'x-rapidapi-host': 'community-open-weather-map.p.rapidapi.com'
+        }
+        };
 
-        axios.get('https://api.openweathermap.org/data/2.5/weather', {
-            params: {
-                q: city,
-                units: 'metric',
-                APPID: api_key,
-            }
-        })
-        .then(response => {
+        axios.request(options).then(function (response) {
             setData(response.data) 
             setCity('')
             setLoading(false)
-        })
-        .catch(error => {
+        }).catch(function (error) {
             setError(true)
             setLoading(false)
             console.log(error.message)
-        })
-
+        });
     }
+
+
+
+
     // Giving city the input value
 
     function handleChange(e) {

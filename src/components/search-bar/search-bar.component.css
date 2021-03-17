@@ -1,26 +1,37 @@
-.search-bar{
-  display: flex;
-  flex-direction: column;
-}
-
 .wrapper{
     display: flex;
     margin: 0 auto 15px auto;
-    width: 865px;
   }
    
   input{
     height: 35px;
     width: 88%;
-    padding-left: 10px;
+    padding: 10px;
     border-radius: 5px;
     outline: none;
     border: none;
   }
 
   input::placeholder{
-    color: #0D1F22;
-    letter-spacing: 4px;
+    color: #3E4756;
+    letter-spacing: 2px;
+    font-size: 14px;
+  }
+
+  button{
+    background-color: #3E4756;
+    color: #fff;
+    height: 35px;
+    width: 12%;
+    border-radius: 5px;
+    margin-left: 6px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  button:hover{
+    background: #313844;
   }
 
   .alert {
@@ -31,47 +42,30 @@
     justify-content: space-between;
     align-items: center;
     border-radius: 5px;
-    padding-left: 10px;
+    padding: 10px;
     margin-bottom: 15px;
   }
 
   .alert .error{
     color: #D8000C;
     font-size: 14px;
-    margin: 0;
   }
 
-  .alert i{
+  .alert .error-icon{
     padding-right: 10px;
     color: #D8000C;
-  }
-  
-  button{
-    position: relative;
-    background:none;
-    border: 1px solid #3E4756;
-    color: #fff;
-    height: 35px;
-    width: 12%;
-    border-radius: 5px;
-    margin-left: 6px;
-    outline: none;
-    cursor: pointer;
-  }
+  } 
 
-  button::before{
-    content: '';
-    position: absolute;
-    background: #3E4756;
-    top: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    z-index: -1;
-    transition: 0.8s;
-  }
+  @media (max-width: 735px){
+    .wrapper{
+      flex-direction: column;
+    }
+    input, button{
+      width: 100%;
+    }
 
-  button:hover::before{
-    width: 0%;
+    button{
+      margin-left: 0;
+      margin-top: 15px;
+    }
   }
-

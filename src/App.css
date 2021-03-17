@@ -1,9 +1,5 @@
 .App {
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   max-width: 80%;
   margin: 0 auto;
   color: #3E4756;

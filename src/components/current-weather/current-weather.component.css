@@ -6,17 +6,20 @@
     background-color: #fff;
     color: #3E4756;
     height: 450px;
-    width: 865px;
+    width: 100%;
     border-radius: 5px;
+    margin-bottom: 25px;
   }
 
-  .current-weather_icon{
-    width: 60px;
+  .current-weather-icon{
+    font-size: 120px;
+    color: #E0C3FC;
+    margin-bottom: 15px;
   }
 
   .current-weather_temp, .current-weather_description{
     font-size: 24px;
-  }
+  } 
 
   .current-weather_description{
     text-transform: capitalize;
@@ -24,7 +27,7 @@
 
   .loader {
     border: 2px solid #f3f3f3;
-    border-top: 2px solid #3C5233; 
+    border-top: 2px solid #3E4756; 
     border-radius: 50%;
     width: 60px;
     height: 60px;

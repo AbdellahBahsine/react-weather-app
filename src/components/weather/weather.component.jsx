@@ -49,7 +49,7 @@ const Weather = () => {
     return(
         <div className="weather">
             <SearchBar handleChange={handleChange} getWeather={getWeather} city={city} error={error} />
-            <CurrentWeather data={data} loading={loading} />
+            <CurrentWeather data={data} loading={loading} code={data.length !== 0 && data.weather[0].id} />
         </div>
     )
 }

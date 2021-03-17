@@ -6,13 +6,13 @@ const SearchBar = ({handleChange, getWeather, city, error}) => {
             <div className="wrapper">
                 <input
                     type="text"
-                    placeholder="Search For a City..."
+                    placeholder="Search for a city..."
                     value={city}
                     onChange={handleChange}
                 />
                 <button onClick={getWeather}>Search</button>
             </div>
-            {error && <div className="alert"><p className="error">Please enter a valid city!</p> <i class="fas fa-exclamation-circle"></i></div>}
+            {error && <div className="alert"><p className="error">Please enter a valid city!</p> <i className="fas fa-exclamation-circle error-icon"></i></div>}
         </div>
     )
 }

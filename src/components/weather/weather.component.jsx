@@ -12,7 +12,6 @@ const Weather = () => {
     const [error, setError] = useState(false)
     const [loading, setLoading] = useState(false)
 
-    const api_key = process.env.REACT_APP_API_KEY;
 
     // Fetching data from Open Weather Map API
 

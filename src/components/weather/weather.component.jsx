@@ -17,6 +17,8 @@ const Weather = () => {
 
     function getWeather() {
 
+        const api_key = process.env.REACT_APP_API_KEY;
+
         if(city.length === 0){
             return setError(true)
         }
@@ -31,11 +33,11 @@ const Weather = () => {
         params: {
             q: city,
             id: '2172797',
-            units: '"metric" or "imperial"',
+            units: "metric",
             mode: 'xml, html'
         },
         headers: {
-            'x-rapidapi-key': "29046fe946mshc672e82c43ffa9bp1c06e2jsn5a2b847befbd",
+            'x-rapidapi-key': api_key,
             'x-rapidapi-host': 'community-open-weather-map.p.rapidapi.com'
         }
         };

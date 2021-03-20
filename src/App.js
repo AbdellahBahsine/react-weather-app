@@ -7,7 +7,7 @@ function App() {
     <div className="App">
       <h1>Weather App</h1>
         <Weather />
-        <p className="copyright">Created By Abdellah Bahsine</p>
+        <p>Created By Abdellah Bahsine</p> 
     </div>
   );
 }
